@@ -1,2 +1,7 @@
 # data-fantasytweetarchives
-An archive for fantasy football twitter data (for possible NLP purposes)
+
+Idea: can we start building up a repository of fantasy football tweets so that someone can run NLP analysis on August/offseason sentiment?
+
+Possible accounts:
+- @32beatwriters
+
