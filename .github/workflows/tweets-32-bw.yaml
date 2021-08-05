@@ -49,10 +49,11 @@ jobs:
 
       - name: Run script
         run: |
-          source("tweets_32beatwriters.R")
+          source("tweets_32beatwriters.R", chdir = TRUE)
         shell: Rscript {0}
+        
 
-      - name: Build and deploy pkgdown site
+      - name: Commit and Push
         run: |
           git config --local user.name "$GITHUB_ACTOR"
           git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
