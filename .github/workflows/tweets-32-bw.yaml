@@ -1,8 +1,8 @@
 on:
-  push:
-    branches:
-      - main
-      - master
+#  push:
+#    branches:
+#      - main
+#      - master
   workflow_dispatch:
   schedule:
     - cron: '0 7 * * 1'
@@ -55,8 +55,8 @@ jobs:
 
       - name: Commit and Push
         run: |
-          git config --local user.name "$GITHUB_ACTOR"
-          git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
+          git config --local user.name "GitHub Actions"
+          git config --local user.email "actions@github.com"
           git add data
           git commit -m "Update tweets from @32beatwriters on `date`" || echo "No changes to commit"
           git push || echo "No changes to commit"
