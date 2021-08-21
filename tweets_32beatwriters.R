@@ -28,7 +28,10 @@ tweets_32 <- rtweet::get_timeline(user = "32beatwriters",
     across(contains("created_at"), as.character)
   )
 
+basename_template <- paste0("tweets_",Sys.Date(),"_{i}",".csv")
+
 arrow::write_dataset(tweets_32,
                      path = "data/32beatwriters",
                      format = "csv",
+                     basename_template = basename_template,
                      partitioning = c("year","month"))
