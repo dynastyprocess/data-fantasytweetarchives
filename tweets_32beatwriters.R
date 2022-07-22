@@ -3,10 +3,9 @@ library(arrow)
 library(dplyr)
 library(purrr)
 
-twitter_token <- rtweet::create_token(
-  app = "Tan-DataCollection",
-  consumer_key = Sys.getenv("TWITTERAPIKEY"),
-  consumer_secret = Sys.getenv("TWITTERAPISECRET"),
+twitter_token <- rtweet::rtweet_bot(
+  api_key = Sys.getenv("TWITTERAPIKEY"),
+  api_secret = Sys.getenv("TWITTERAPISECRET"),
   access_token = Sys.getenv("TWITTERACCESSTOKEN"),
   access_secret = Sys.getenv("TWITTERACCESSTOKENSECRET")
 )
