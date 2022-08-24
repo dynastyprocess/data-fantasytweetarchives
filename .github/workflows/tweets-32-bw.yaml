@@ -4,8 +4,8 @@ on:
 #      - main
 #      - master
   workflow_dispatch:
-  schedule:
-    - cron: '0 12 * * 1,3,5'
+  #schedule:
+  #  - cron: '0 12 * * 1,3,5'
 
 name: gather-32bw-tweets
 
